@@ -160,31 +160,29 @@ html, body {
 
 /* TXT next to image  */
 
-
-
 .sec2-container {
     padding-top: 7em;
-    display: flex;        
-    justify-content: center; 
+    display: grid;
+    grid-template-columns: 4fr 6fr; 
+    gap: 50px; 
     align-items: center;   
     height: 100vh;         
     padding: 0 5%; 
     background-color: black;
-    color: white;       
+    color: white;   
+    margin-bottom: 5em;    
 }
 
 .text-column {
-    flex: 1;               
-    padding-right: 50px;   
-    max-width: 500px;      
+    padding-right: 0; 
+    max-width: none; 
 }
 
 .sec2-img {
-    flex: 1;              
-    display: flex;
-    justify-content: flex-end;
     overflow: hidden;
+    justify-self: end; 
 }
+
 
 .sec2-img img {
     max-width: 100%;       
@@ -192,49 +190,28 @@ html, body {
 }
 
 
-.eliphas-text {
-    text-transform: uppercase;
-    font-size: 0.8em;
-    opacity: 0.7;
-      font-family: "Sekuya", system-ui;
-     font-weight: 400;
-    font-style: normal;
-}
-
-.sec2-h1 {
-    font-size: 2.5em;
-    line-height: 1.2;
-    margin: 0.9em 0;
-    font-family: sans-serif;
-    font-weight: 100;
-    font-style: normal
-}
-
-.sec2-ptext {
-    opacity: 0.9;
-    font-family: poppins, system-ui;
-}
 
 @media (max-width: 768px) {
     .sec2-container {
-        flex-direction: column; 
+        
+        grid-template-columns: 1fr; 
         padding: 20px 5%;
+        height: auto; 
+        gap: 20px; 
     }
 
-    .sec2-h1, .eliphas-text{
+    .sec2-h1, .eliphas-text, .sec2-ptext {
       text-align: center;
     }
 
-    .text-column {
-        padding-right: 0;
-        margin-bottom: 20px;
-    }
-
     .sec2-img{
-        justify-content: center; 
+        
+        justify-self: center; 
     }
 }
 
+
+/* Eliphas collage */
 
 .grid-container {
   display: grid;
@@ -288,7 +265,7 @@ html, body {
   position: relative; 
   text-align: center;
   color: white;
-  margin-top: 10em;
+  margin-top: 6em;
 }
 
 .sec4-txt {
@@ -365,4 +342,3 @@ footer {
   font-size: 0.8em;
   color: #888;
 }
-
